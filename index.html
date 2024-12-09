@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se | LinkedIn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f2ef;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            width: 100%;
+        }
+
+        .header {
+            background-color: #fff;
+            padding: 10px 20px;
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            max-width: 150px;
+            height: auto;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            max-width: 400px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            text-align: left;
+        }
+
+        form label {
+            font-size: 14px;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        form input:focus {
+            border-color: #0a66c2;
+            outline: none;
+            box-shadow: 0 0 4px rgba(10, 102, 194, 0.4);
+        }
+
+        .password-field {
+            position: relative;
+        }
+
+        #togglePassword {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #0a66c2;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .checkbox-container {
+            display:flex;
+            align-items: center;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-container input {
+            margin-right: 8px;
+            transform: scale(1.2);
+        }
+
+        .terms {
+            font-size: 12px;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .terms a {
+            color: #0a66c2;
+            text-decoration: none;
+        }
+
+        .terms a:hover {
+            text-decoration: underline;
+        }
+
+        .signup-button {
+            background-color: #0a66c2;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-button:hover {
+            background-color: #004182;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 12px;
+        }
+
+        .footer-links a {
+            color: #0a66c2;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 15px;
+            }
+
+            .title {
+                font-size: 20px;
+            }
+
+            .signup-button {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                max-width: 120px;
+            }
+
+            .form-container {
+                padding: 10px;
+            }
+
+            .title {
+                font-size: 18px;
+            }
+
+            form label {
+                font-size: 12px;
+            }
+
+            .signup-button {
+                padding: 8px;
+                font-size: 12px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <img src="Imagem/linkedin.jpg" alt="Logotipo do LinkedIn" class="logo">
+            </div>
+        </header>
+        
+        <main>
+            <h1 class="title">Aproveite sua vida profissional ao máximo</h1>
+            <div class="form-container">
+                <form id="signupForm">
+                    <label for="email">E-mail ou número de telefone</label>
+                    <input type="email" id="email" placeholder="E-mail ou número de telefone" required>
+                    
+                    <label for="password">Senha (+ 6 caracteres)</label>
+                    <div class="password-field">
+                        <input type="password" id="password" placeholder="Senha" minlength="6" required>
+                        <button type="button" id="togglePassword">Exibir</button>
+                    </div>
+                    
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe">Lembrar dos meus dados</label>
+                    </div>
+                    
+                    <p class="terms">
+                        Ao clicar em <strong>Aceite e cadastre-se</strong>, você aceita o 
+                        <a href="#">Contrato do Usuário</a>, a <a href="#">Política de Privacidade</a> e a 
+                        <a href="#">Política de Cookies</a> do LinkedIn.
+                    </p>
+                    
+                    <button type="submit" class="signup-button" id="signupButton">Aceite e cadastre-se</button>
+                </form>
+            </div>
+        </main>
+        <footer class="footer">
+            <ul class="footer-links">
+                <li>&copy; 2024 LinkedIn</li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Acessibilidade</a></li>
+                <li><a href="#">Contrato do Usuário</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Política de Cookies</a></li>
+                <li><a href="#">Política de Direitos Autorais</a></li>
+            </ul>
+        </footer>
+    </div>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            window.location.href = 'cadastro.html';
+        });
+
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            const passwordField = document.getElementById('password');
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+            this.textContent = type === 'password' ? 'Exibir' : 'Ocultar';
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
